@@ -1,0 +1,27 @@
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0;
+
+  .mat-form-field {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 16px;
+  } 
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  mat-form-field {
+    flex: 1;
+  }
+
+  button {
+    margin-left: 8px;
+  }
+}

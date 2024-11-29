@@ -1,0 +1,18 @@
+<div class="pokemon-list">
+  <!-- Muestra los Pokémon si existen -->
+  <mat-card *ngFor="let pokemon of pokemons" class="pokemon-card">
+    <mat-card-header>
+      <mat-card-title>{{ pokemon.name | titlecase }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + getPokemonId(pokemon.url) + '.png'"
+      alt="{{ pokemon.name }}"
+    />
+  </mat-card>
+
+  <!-- Muestra un mensaje si no hay resultados -->
+  <div *ngIf="pokemons.length === 0" class="no-results">
+    No Pokémon found.
+  </div>
+</div>

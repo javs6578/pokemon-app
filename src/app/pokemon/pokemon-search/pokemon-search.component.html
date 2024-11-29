@@ -1,0 +1,12 @@
+<div class="search-container full-width-left-align">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Search Pokémon</mat-label>
+    <input
+      matInput
+      [(ngModel)]="searchText"
+      (ngModelChange)="onSearch()"
+      placeholder="Enter Pokémon name"
+      class="w-100"
+    />
+  </mat-form-field>
+</div>
